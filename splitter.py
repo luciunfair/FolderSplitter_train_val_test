@@ -22,6 +22,7 @@ def split(main_folder, split_folder, have_test=True, have_label=False, main_fold
     if have_label == True:
         all_files_label = os.listdir(main_folder_label)
     index_shuf = list(range(len(all_files)))
+    random.seed(10)
     random.shuffle(index_shuf)
 
     all_files_list = []
